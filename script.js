@@ -34,25 +34,24 @@ textArea.addEventListener('keyup', () => {
   counter.innerHTML = `${500 - textArea.value.length} caracteres restantes`;
 });
 
-// const btnSubmitForm = document.getElementById('submit-btn');
-// const submitBtn = document.getElementById('submit-btn');
-// submitBtn.addEventListener('click',(event)=>{
-// let arrayFormValues = [];
-// arrayFormValues.push(document.getElementsByName('rate:checked').value);
-// arrayFormValues.push(document.getElementsByName('house:selected').value);
-// arrayFormValues.push(document.getElementById('input-email').value);
-// arrayFormValues.push(document.getElementsByName('familia:checked').value);
-// arrayFormValues.push(document.getElementById('input-name').value);
-// arrayFormValues.push(document.getElementById('input-lastname').value);
-// arrayFormValues.push(document.getElementsByClassName('subject:checked').value);
-// arrayFormValues.push(document.getElementById('textarea').value);
+const btnSubmitForm = document.getElementById('submit-btn');
+btnSubmitForm.addEventListener('click',(event)=>{
+let arrayFormValues = [];
 
-//   event.preventDefault();
-//   document.getElementById('evaluation-form').innerHTML = '';
-//   // formData.action = 'onclick';
-//   for(let i = 0; i<8;i++){
-//     let p = document.createElement('p');
-//     p.innerHTML = document.getElementById('input-email').value;
-//     formData.appendChild(p);
-//   }
-// });
+arrayFormValues.push(document.getElementsByName('rate:checked').value);
+arrayFormValues.push(document.getElementsByName('house:selected').value);
+arrayFormValues.push(document.getElementById('input-email').value);
+arrayFormValues.push(document.getElementsByName('familia:checked').value);
+arrayFormValues.push(document.getElementById('input-name').value);
+arrayFormValues.push(document.getElementById('input-lastname').value);
+arrayFormValues.push(document.getElementsByClassName('subject:checked').value);
+arrayFormValues.push(document.getElementById('textarea').value);
+
+let p = document.createElement('p');
+  event.preventDefault();
+  document.getElementById('evaluation-form').innerHTML = '';
+  for(let i = 0; i<8;i++){
+    p.innerHTML = arrayFormValues[i].value;
+    document.getElementById('evaluation-form').appendChild(p);
+  }
+});
