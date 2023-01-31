@@ -68,6 +68,7 @@ const selectedRate = () => {
 const sendForm = (e) => {
   e.preventDefault();
   evaluationForm.style.display = 'none';
+  document.getElementById('form-data').style.display = 'flex';
   formData.innerText = `Nome: ${inputName.value} ${inputLastName.value}
   Email: ${inputFormEmail.value}
   Casa: ${house.value}

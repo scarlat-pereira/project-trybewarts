@@ -101,7 +101,7 @@ button:active {
 }
 
 #form-data {
-  display: flex;
+  display: none;
   border-radius: 7px;
   width: 675px;
   background-color: rgba(50, 167, 145, 0.928);
